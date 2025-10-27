@@ -137,4 +137,8 @@ export default {
   background-color: #da1cbe;
   color: rgb(81, 64, 64);
 }
+
+.table td{
+  vertical-align: middle;
+}
 </style>
