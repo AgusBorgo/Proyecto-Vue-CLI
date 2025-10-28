@@ -9,12 +9,10 @@
       </div>
       <div class="card-body">
         <main>
-          <!-- Uso del componente Binding -->
-           <!-- <Binding /> -->
-           <!-- <Estructura /> -->
-            <!-- <Atributos /> -->
-          
-          <Formulario />
+            <Binding /> 
+            <Estructura />
+            <Atributos />
+            <Formulario />
         </main>
       </div>
     </div>
