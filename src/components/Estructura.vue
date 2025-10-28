@@ -99,6 +99,14 @@
        </div>
 
 
+      <!-- Propiedades computadas -->
+      <!-- v-if / v-else-if / v-else -->
+
+      <h4 class="alert alert-primary">
+        <span v-if="obtenerDatosAlumnos.cantidad == 0"> Ningun alumno hizo el curso</span>
+        <span v-else-if="obtenerDatosAlumnos.cantidad == alumnos.length">Todos los alumnos hicieron el curso</span>
+        <span v-else> {{obtenerDatosAlumnos.cantidad}} de {{obtenerDatosAlumnos.total}} alumnos hicieron el curso </span>
+      </h4>
 
     </div>
   </section>
@@ -134,6 +142,19 @@ export default {
 
   computed: {
     // Propiedades computadas, son como getters
+    // No reciben parámetros
+    // Tienen que retornar un valor
+    obtenerDatosAlumnos(){
+      let cant = 0
+      this.alumnos.forEach(alumno =>{
+        if(alumno.curso) cant++
+      })
+      // Retorna un objeto con la cantidad de alumnos que hicieron el curso y el total de alumnos
+      return {
+        cantidad: cant,
+        total: this.alumnos.length
+      }
+    }
   },
 
   watch: {
