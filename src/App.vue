@@ -21,11 +21,14 @@
 
 <script>
 
+import NavBar from './components/NavBar.vue';
+
   /*Componentes de simple archivo 
  (template, script, scope)*/
 import Binding from './components/Binding.vue';
 import Estructura from './components/Estructura.vue';
 import Atributos from './components/Atributos.vue';
+
 
 
 

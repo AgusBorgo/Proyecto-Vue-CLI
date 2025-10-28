@@ -10,7 +10,7 @@
 
       <button class="btn btn-success my-3" @click="estado - !estado" > Cambiar color fondo</button>
 
-      <p :style="{'background-color': estado? 'green' : 'crimson', color: aliceblue, padding: '10px', 'border-radius': '10px',}"> 
+      <p :style="{'background-color': estado? 'green' : 'crimson', color: 'aliceblue', padding: '10px', 'border-radius': '10px',}"> 
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam suscipit nobis velit perspiciatis quae tenetur veniam recusandae ducimus asperiores libero ipsum placeat quam, maiores non debitis voluptate. Odio, voluptas fuga.
       </p>
 
