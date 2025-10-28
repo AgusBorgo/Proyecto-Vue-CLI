@@ -12,7 +12,8 @@
           <!-- Uso del componente Binding -->
            <!-- <Binding /> -->
            <!-- <Estructura /> -->
-          <Atributos />
+            <!-- <Atributos /> -->
+          
           <Formulario />
         </main>
       </div>

@@ -2,3 +2,8 @@
   background-color: #2e486e;
   color: white;
 }
+
+label {
+  text-transform: uppercase;
+  font-weight: bold;
+}
