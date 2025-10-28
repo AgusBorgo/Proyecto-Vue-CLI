@@ -9,6 +9,7 @@
       </div>
       <div class="card-body">
         <main>
+            <NavBar />
             <Binding /> 
             <Estructura />
             <Atributos />
@@ -22,7 +23,6 @@
 <script>
 
 import NavBar from './components/NavBar.vue';
-
   /*Componentes de simple archivo 
  (template, script, scope)*/
 import Binding from './components/Binding.vue';
@@ -41,10 +41,12 @@ export default {
   name: 'App',
   components: {
     // Importar y registrar componentes hijos aquí
+    NavBar,
     Binding,
     Estructura,
     Atributos,
     Formulario,
+    
   },
 };
 </script>
