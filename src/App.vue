@@ -10,8 +10,8 @@
       <div class="card-body">
         <main>
           <!-- Uso del componente Binding -->
-          <Binding />
-          <Estructura />
+           <!-- <Binding /> -->
+           <!-- <Estructura /> -->
           <Atributos />
           <Formulario />
         </main>
