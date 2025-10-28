@@ -74,6 +74,24 @@
           </tbody>
         </table>
         </div>
+
+        <br>
+      <!-- cards  -->
+       <!-- La w hace las tarjetas mas chicas -->
+       <div v-for="(alumno, index) in alumnos" :key="index" class="media alert alert-danger w-50">
+        <img :src="alumno.foto" :alt="alumnos.nombre" width="70" >
+        <div>
+          <strong>Nombre: <a :href="alumno.foto">{{alumno.nombre}}  </a></strong> <br>
+          <strong>Edad:</strong> {{alumno.edad}} <br>
+          <strong>Curso:</strong> {{ alumno.curso? 'Si' : 'No' }} <br>
+          <!-- Ejemplo de v-model, modifica la info con el checkbox -->
+          Hizo el curso: <input type="checkbox" v-model="alumno.curso"> <br>
+          <button class="btn btn-danger ms-3" @click="borrarAlumno()" >Borrar</button>
+        </div>
+       </div>
+
+
+
     </div>
   </section>
 </template>
@@ -115,7 +133,9 @@ export default {
   },
 
   methods: {
-    // Métodos del componente
+    borrarAlumno() {
+      this.alumnos.pop();
+    },
   },
 
   created() {
@@ -140,5 +160,12 @@ export default {
 
 .table td{
   vertical-align: middle;
+}
+
+.media {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
 }
 </style>
