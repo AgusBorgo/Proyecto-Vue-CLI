@@ -51,7 +51,7 @@
         </ul>
 
         <hr>
-
+        <div v-if="alumnos.length"> 
         <div class="table-responsive">
         <table class="table table-dark">
           <thead>
@@ -74,7 +74,15 @@
           </tbody>
         </table>
         </div>
+        </div>
 
+        <div v-else>
+          <p class="alert alert-warning">No hay alumnos registrados</p>
+          <button class="btn btn-danger ms-3" @click="agregarAlumno()">
+            Agregar Alumno
+          </button>
+          
+        </div>
         <br>
       <!-- cards  -->
        <!-- La w hace las tarjetas mas chicas -->
@@ -86,7 +94,7 @@
           <strong>Curso:</strong> {{ alumno.curso? 'Si' : 'No' }} <br>
           <!-- Ejemplo de v-model, modifica la info con el checkbox -->
           Hizo el curso: <input type="checkbox" v-model="alumno.curso"> <br>
-          <button class="btn btn-danger ms-3" @click="borrarAlumno()" >Borrar</button>
+          <button class="btn btn-danger ms-3" @click="borrarAlumno(index)" >Borrar</button>
         </div>
        </div>
 
@@ -133,9 +141,17 @@ export default {
   },
 
   methods: {
-    borrarAlumno() {
-      this.alumnos.pop();
+    borrarAlumno(index) {
+      this.alumnos.splice(index, 1);
     },
+    agregarAlumno(){
+      this.alumnos.push({
+        nombre: 'Marcos',
+        edad: 18,
+        foto: 'https://randomuser.me/api/portraits/men/5.jpg',
+        curso: false,
+      });
+    }
   },
 
   created() {
