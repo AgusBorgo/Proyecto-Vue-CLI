@@ -11,8 +11,8 @@ export default {
       formData:{
         /* Aquí podríamos agrupar los datos del formulario en un solo objeto */
         nombre: null,
-        email: null,
-        mensaje: null
+        apellido: null,
+        edad: null,
       }
     };
   },
@@ -27,7 +27,8 @@ export default {
 
   methods: {
     enviar(){
-      alert(`Formulario enviado por: ${this.nombre}`);
+      const datosFormulario = { ...this.formData };
+     console.log(datosFormulario);
     }
   },
 
