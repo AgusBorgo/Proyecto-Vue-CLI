@@ -1,0 +1,5 @@
+
+<!-- <button class="btn btb-success m-2" @click="contar"></button> -->
+<button :class="['btn', getColorFondo(), 'm-2']" @click="contar">
+  Contar {{ contador }}
+</button>
