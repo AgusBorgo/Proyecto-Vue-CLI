@@ -1,13 +1,18 @@
 <template>
   <section class="card">
     <div class="card-hearder">
-        <h3>Componente Http</h3>
+        <h3>Componente Http - TIMER {{ timer }}</h3>
     </div>
 
     <div class="card-body">
-       <button class="btn btn-primary my-3" @click="obtener">
+       <button class="btn btn-primary my-3 me-2" @click="obtener">
         Obtener Posts
        </button>
+
+       <button class="btn btn-danger my-3" @click="posts = []">
+        Limpiar Posts
+        </button>
+
        <!-- <pre><p>{{ posts }}</p></pre> -->
 
        <div v-if="posts.length">
@@ -52,6 +57,8 @@ export default {
     return {
       posts: [
       ],
+      timer: 0,
+      refTimer: null,
     };
   },
 
@@ -66,25 +73,66 @@ export default {
   methods: {
     async obtener(){
       const post = await obtenerPosts()
-      console.log(post);
+    //  console.log(post);
       this.posts = post;
-    }
+    },
+    
   },
 
   // ------------ LIFECYCLE HOOKS ------------
   // Estos son los hooks del ciclo de vida del componente
  // Puedes usar estos hooks para ejecutar código en diferentes etapas del ciclo de vida del componente
   // -----------------------------------------
+  
+
+  // Antes y después de la creación del componente en memoria
+  beforeCreate() {
+    // Código que se ejecuta antes de que el componente se cree
+    console.log('Componente Http antes de ser creado');
+  },
   created() {
     // Código que se ejecuta cuando el componente se crea
+    console.log('Componente Http creado');
+  },
+  // Antes y después de montar el componente en el DOM (VISTA)
+  beforeMount () {
+    // Código que se ejecuta antes de que el componente se monte
+    console.log('Componente Http antes de ser montado en el DOM');
   },
 
   mounted() {
     // Código que se ejecuta cuando el componente se monta
+    this.obtener();
+    console.log('Componente Http montado en el DOM');
+  
+    this.refTimer= setInterval( () => {
+      this.timer++;
+    }, 1000);
+  },
+  // Antes y después de actualizar el componente (datos/reactividad)
+
+  beforeUpdate() {
+    // Código que se ejecuta antes de que el componente se actualice
+    //console.log('Componente Http antes de ser actualizado');
+  },
+
+  updated() {
+    // Código que se ejecuta cuando el componente se actualiza
+   // console.log('Componente Http actualizado');
+  },
+
+  // Antes y después de desmontar el componente del DOM (VISTA)
+  beforeUnmount() {
+    // Código que se ejecuta antes de que el componente se desmonte
+    console.log('Componente Http antes de ser desmontado del DOM');
   },
 
   unmounted() {
     // Código que se ejecuta cuando el componente se desmonta
+    console.log('Componente Http desmontado del DOM');
+    
+    clearInterval(this.refTimer);
+    
   },
 };
 </script>
