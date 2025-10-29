@@ -10,10 +10,13 @@
       <div class="card-body">
         <main>
             <NavBar />
-            <Binding /> 
+            <!-- Componente del router
+             sin necesidad de agregarlos -->
+            <RouterView />
+           <!--  <Binding /> 
             <Estructura />
             <Atributos />
-            <Formulario />
+            <Formulario /> -->
         </main>
       </div>
     </div>

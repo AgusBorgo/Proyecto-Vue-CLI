@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Inicio</a>
+    <RouterLink class="navbar-brand" to="/">Inicio</RouterLink>
    
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -10,16 +10,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">Binding</a>
+          <RouterLink class="nav-link" to="/binding">Binding</RouterLink>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Estructura</a>
+          <RouterLink class="nav-link" to="/estructura">Estructura</RouterLink>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Atributo</a>
+          <RouterLink class="nav-link" to="/atributos">Atributo</RouterLink>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Formulario</a>
+          <RouterLink class="nav-link" to="/formulario">Formulario</RouterLink>
         </li>
       </ul>
     </div>
