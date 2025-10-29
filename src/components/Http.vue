@@ -6,12 +6,12 @@
 
     <div class="card-body">
        
-      </div>
+    </div>
   </section>
 </template>
 
 <script>
-import '.../Servicios/posts.js';
+import '../Servicios/posts.js'
 export default {
   name: 'ComponenteHttp',
 
