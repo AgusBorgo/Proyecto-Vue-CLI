@@ -8,6 +8,7 @@ import Estructura from './components/Estructura.vue';
 import Atributos from './components/Atributos.vue';
 import Formulario from './components/Formulario/index.vue';  
 import Contadores from './components/Contadores.vue';
+import Http from './components/Http.vue';
 
 const routes = [
 
@@ -19,6 +20,7 @@ const routes = [
     { path: '/atributos', component: Atributos },
     { path: '/formulario', component: Formulario },
     { path: '/contadores', component: Contadores },
+    { path: '/http', component: Http },
     /*Definicion de ruta no encontrada*/
     {path: '/:pathMatch(.*)*', redirect: '/binding'},
 ]
