@@ -9,6 +9,7 @@ import Atributos from './components/Atributos.vue';
 import Formulario from './components/Formulario/index.vue';  
 import Contadores from './components/Contadores.vue';
 import Http from './components/Http.vue';
+import Api from './components/Api.vue';
 
 const routes = [
 
@@ -21,6 +22,7 @@ const routes = [
     { path: '/formulario', component: Formulario },
     { path: '/contadores', component: Contadores },
     { path: '/http', component: Http },
+    { path: '/api', component: Api},
     /*Definicion de ruta no encontrada*/
     {path: '/:pathMatch(.*)*', redirect: '/binding'},
 ]

@@ -27,6 +27,9 @@
         <li class="nav-item">
           <RouterLink class="nav-link" to="/http">Http</RouterLink>
         </li>
+        <li class="nav-item">
+          <RouterLink class="nav-link" to="/api">Appi</RouterLink>
+        </li>
       </ul>
     </div>
   </div>
