@@ -171,7 +171,8 @@ export default {
   computed: {
     // Propiedades computadas, son como getters
     algunCampoNoValido(){
-      return !this.producto.nombre;
+      return Object.entries(this.producto).filter
+      (e => e[0]!='envio' ? !e[1] : false).length
     },
   },
 
@@ -189,7 +190,7 @@ export default {
         categoria: null,
         detalles: null,
         foto: null,
-        envio: null,
+        envio: false,
       };
     },
     /* Metdo para consumir la api rest full*/
