@@ -201,9 +201,13 @@ export default {
       this.productos = this.productos;
     },
     //POST
-    enviar(){
+   async  enviar(){
       const producto = { ...this.producto };
       console.log(producto);
+
+      //agrego un producto en el recurso remoto
+      const productoGuardado = await this.servicioProductos.postProducto(producto);
+      console.log(productoGuardado);
 
       this.producto= this.iniForm();
       this.productoDirty= this.iniForm();
